@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js by Maximilian Schwarzmüller</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- directives -->
+        <input type="text" v-on:input="changeTitle">
+        <p>
+            <!--changeTitle() -->- {{ title }}</p>
+
+        <!-- method can also be interpolated if the return value can be outputed as a string -->
+        <p>
+            <!--greeting() -->- {{ greeting() }}</p>
+        <p>
+            <!--myFruit() -->- I love {{ myFruit() }}</p>
+
+        <!-- Bind links dynamically -->
+        <p>
+            <!--greeting() -->- {{ greeting() }} -
+            <a v-bind:href="link" target="blank">Google</a>
+        </p>
+        <hr>
+
+        <!-- Output raw HTML breaks below -->
+        <!-- <p>{{ finishedLink }}</p>  -->
+
+        <!-- Output raw HTML works below -->
+        <p v-html="finishedLink"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+- By default Vue escapes HTML, meaning it doesn't render HTML, rather it renders text.
+
+- Computed: {} and watch:{} helps you build reactive apps
+
+- Make sure to check folder vue-instances
+
+- SHORTHAND
+`<a v-bind:href="link" target="blank">Google</a>`
+
+`<a :href="link" target="blank">Google</a>`
+___
+`<button v-on:click="increment(2, $event)">Do it!</button>`
+
+`<button @click="increment(2, $event)">Do it!</button>`

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Events</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- listen for the event -->
+        <!-- pass arguments to ()-->
+        <button v-on:click="increment(2, $event)">Do it!</button>
+        <p>{{counter}}</p>
+
+
+        <div style="width:300px;height:300px;background-color:lightcoral;" v-on:mousemove="updateCoordinates"> Coordinates: {{x}} / {{y}}
+            <span style="width:90px;height:90px;background-color:lightblue;display:block;margin:20px auto" v-on:mousemove="killMe">Dead Spot</span>
+            <!-- same behavior -->
+            <span style="width:90px;height:90px;background-color:lightgreen;display:block;margin:20px auto" v-on:mousemove.stop>Dead Spot II</span>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

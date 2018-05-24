@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue JS</title>
+</head>
+<body>
+    <!-- Hello World  -->
+    <div id="app">
+        <h1>{{ message }}</h1>
+    </div>
+
+    <!-- bind element attributes -->
+    <div id="app2">
+        <span v-bind:title='message'>
+             Hover your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+
+    <!-- conditions -->
+    <div id="app3">
+        <span v-if='seen'>Now you see me</span>
+    </div>
+
+    <!-- loops -->
+    <div id="app4">
+        <ol>
+            <li v-for='todo in todos'>{{todo.text}}</li>
+        </ol>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+$npm run build
+
+- Log into AWS
+- Go to: S3
+- Create a Bucket
+- Go to: Properties -> Static Website Hosting
+- Chose "Use this bucket to host a website"
+- index document = index.html 
+- Error document = index.html
+- Go to: Permissions -> Bucket Policy
+- Google: aws static webpage
+- https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html
+- Grab:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::example.com/*"
+            ]
+        }
+    ]
+}
+
+- Go back to your AWS app and go to: Overview -> Upload 
+- Add index.html and build.js files from your app folder directory
+- Create a dist folder and move build.js to it.
+- Go to: Properties -> Static Website Hosting
+- Get the Endpoint
+- Voila 

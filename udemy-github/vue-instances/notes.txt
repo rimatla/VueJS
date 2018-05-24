@@ -1,0 +1,1 @@
+- Instances are the middle man between our JS business logic code and the DOM ie: el, data, methods, computed, watch
